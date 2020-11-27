@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family: 'Rubik', sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #000;
+}
+
+.calc-grid{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px,auto) repeat(5,100px);
+}
+button{
+    border-radius: 50%;
+}
+.calc-grid > button{
+    
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    outline: none;
+    border: 10px solid #000;
+    background-color: #555;
+}
+.calc-grid > button:hover{
+    background-color: #777;
+    color: #fff;
+}
+.span-two{
+    grid-column: span 2;
+    border-radius: 50px 50px 50px 50px;
+}
+.output{
+    grid-column: 1/-1;
+    background-color:none;
+    display: flex;
+    background-color: #000;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.output .previous-operand{
+    color: #f5f5f5;
+    font-size: 1.5rem;
+}
+.output .current-operand{
+    color: #fff;
+    font-size: 2.5rem;
+}
+#sym{
+    background-color: #ff4400;
+}
+#ac{
+    background-color: #888;
+}
+#sym:hover{
+    background-color: #f57344;
+}
+#ac:hover{
+    background-color: #999;
+}
